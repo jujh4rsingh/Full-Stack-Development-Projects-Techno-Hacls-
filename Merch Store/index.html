@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>J4bistash - Just Another Bright Idea</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <img src="image/logo.png" alt="J4bistash Logo" class="logo" />
+    <h1 class="tagline">Just Another Bright Idea</h1>
+    <button class="cart-btn" onclick="toggleCart()">🛒 View Cart</button>
+  </header>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Item added to cart!</div>
+
+  <!-- Main Content -->
+  <main>
+    <h2 class="section-title">✨ Explore Our Merch ✨</h2>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="assets/tshirt.png" alt="T-shirt" />
+        <h3>J4bistash T-Shirt</h3>
+        <p>₹799</p>
+        <button onclick="addToCart('J4bistash T-Shirt', 799)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/notebook.png" alt="Notebook" />
+        <h3>Aesthetic Notebook</h3>
+        <p>₹299</p>
+        <button onclick="addToCart('Aesthetic Notebook', 299)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/cap.png" alt="Cap" />
+        <h3>J4bi Black Cap</h3>
+        <p>₹499</p>
+        <button onclick="addToCart('J4bi Black Cap', 499)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/hoodie.png" alt="Hoodie" />
+        <h3>Signature Hoodie</h3>
+        <p>₹1199</p>
+        <button onclick="addToCart('Signature Hoodie', 1199)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/stickers.png" alt="Stickers" />
+        <h3>Sticker Pack</h3>
+        <p>₹199</p>
+        <button onclick="addToCart('Sticker Pack', 199)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/bottle.png" alt="Bottle" />
+        <h3>Hydration Bottle</h3>
+        <p>₹599</p>
+        <button onclick="addToCart('Hydration Bottle', 599)">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Side Cart Section -->
+  <section id="cart-section" class="cart-section hidden">
+    <h2>Your Cart 🧺</h2>
+    <div id="cart-items"></div>
+    <h3 id="total-price">Total: ₹0</h3>
+    <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
